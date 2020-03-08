@@ -53,7 +53,7 @@ export default function App() {
 npm install antd-final-form
 ```
 
-Add `import "antd/dist/antd.css"` to your `index.js` file or check the [Advanced setup](https://github.com/jannikbuschke/formik-antd#advanced-setup) section
+Add `import "antd/dist/antd.css"` to your `index.js` file.
 
 ## Core Components
 
