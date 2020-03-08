@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { Input, Typography } from 'antd';
+import { FieldRenderProps } from 'react-final-form';
 
 const { Text } = Typography;
 
-const AntdInput = ({ input, meta, ...rest }: any): React.ReactElement => {
+type Props = FieldRenderProps<string>;
+
+const AntdInput: React.FC<Props> = ({ input, meta, ...rest }: Props) => {
   return (
     <div>
       <Input {...input} {...rest} />
