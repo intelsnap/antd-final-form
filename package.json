@@ -1,6 +1,6 @@
 {
   "name": "antd-final-form",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Antd components that can be used with React Final Form.",
   "repository": "https://github.com/intelsnap/antd-final-form.git",
   "author": "Arif Hanif <arif.hanif3@gmail.com>",
