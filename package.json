@@ -1,0 +1,55 @@
+{
+  "name": "antd-final-form",
+  "version": "0.1.4",
+  "description": "Antd components that can be used with React Final Form.",
+  "repository": "https://github.com/intelsnap/antd-final-form.git",
+  "author": "Arif Hanif <arif.hanif3@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "final-form",
+    "react-final-form",
+    "antd",
+    "ant",
+    "design",
+    "form"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "es"
+  ],
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.es.json",
+    "tsc": "tsc && tsc -p tsconfig.es.json",
+    "watch": "tsc --watch -p tsconfig.es.json",
+    "cleanbuild": "rm -r node_modules && npm install && tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "prettier --write src/**/*.* package.json"
+  },
+  "module": "./es/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/types.d.ts",
+  "peerDependencies": {
+    "antd": ">= 3.12.1 < 5",
+    "final-form": ">= 4.0.0 < 5",
+    "react": ">= 16.8.0 < 17",
+    "react-dom": ">= 16.8.0 < 17",
+    "react-final-form": ">= 6.0.0 < 7"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "antd": "^4.0.1",
+    "dayjs": "^1.8.21",
+    "final-form": "^4.18.7",
+    "prettier": "^1.19.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-final-form": "^6.3.5",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
+}
