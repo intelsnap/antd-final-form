@@ -1,0 +1,22 @@
+{
+  "commit": false,
+  "files": [
+    "README.md"
+  ],
+  "badgeTemplate": "\n[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors)\n",
+  "projectName": "antd-final-form",
+  "projectOwner": "intelsnap",
+  "repoType": "github",
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "arif-hanif",
+      "name": "Arif Hanif",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8672758?v=4",
+      "profile": "https://github.com/arif-hanif",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
