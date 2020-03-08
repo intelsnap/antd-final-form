@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { AntdInput } from 'antd-final-form';
+import { Input } from 'antd';
 import { Form, Field } from 'react-final-form';
 import 'antd/dist/antd.css';
 
@@ -7,7 +8,7 @@ export default function App() {
   return (
     <Form
       onSubmit={(values) => console.log(values)}
-      initialValues={{ firstName: 'larry', lastName: false }}
+      initialValues={{ firstName: 'Larry', lastName: 'Bird' }}
       render={({ handleSubmit, form, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit}>
           <div>

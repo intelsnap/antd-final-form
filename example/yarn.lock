@@ -1823,10 +1823,9 @@ ansi-styles@^4.1.0:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
 
-antd-final-form@latest:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/antd-final-form/-/antd-final-form-0.1.13.tgz#d3d18ce53c5183559eeb95b829a1761251347c64"
-  integrity sha512-nssE0ABSo0l5ZQNXehaKgFQpuIahrrZhRTpjU/4vTjB8uVDaxmbjcV9fq6qPleCI2SmCQVTrbPFeIwRcZgJLuw==
+"antd-final-form@link:..":
+  version "0.0.0"
+  uid ""
 
 antd@4.0.2:
   version "4.0.2"

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Input, Typography } from 'antd';
-import { ClosedCircleFilled } from '@ant-design/icons';
+import { CloseCircleFilled } from '@ant-design/icons';
 import { FieldRenderProps } from 'react-final-form';
 
 const { Text } = Typography;
