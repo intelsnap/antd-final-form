@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { AntdInput } from 'antd-final-form';
-import { Input } from 'antd';
 import { Form, Field } from 'react-final-form';
 import 'antd/dist/antd.css';
 
