@@ -19,7 +19,10 @@
     "noUnusedLocals": false,
     "declaration": true,
     "declarationMap": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "lib"
+    ]
   },
   "exclude": ["lib", "es", "node_modules", "**/*.test.tsx"]
 }

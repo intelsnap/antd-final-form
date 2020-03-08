@@ -1,6 +1,6 @@
 {
   "name": "antd-final-form",
-  "version": "0.1.6",
+  "version": "0.1.11",
   "description": "Antd components that can be used with React Final Form.",
   "repository": "https://github.com/intelsnap/antd-final-form.git",
   "author": "Arif Hanif <arif.hanif3@gmail.com>",
@@ -23,10 +23,11 @@
     "build": "tsc && tsc -p tsconfig.es.json",
     "tsc": "tsc && tsc -p tsconfig.es.json",
     "watch": "tsc --watch -p tsconfig.es.json",
-    "cleanbuild": "rm -r node_modules && npm install && tsc",
+    "cleanbuild": "rm -r node_modules && yarn install && tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "format": "prettier --write src/**/*.* package.json"
+    "format": "prettier --write src/**/*.* package.json",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}'"
   },
   "module": "./es/index.js",
   "main": "./lib/index.js",
@@ -41,8 +42,15 @@
   "devDependencies": {
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "antd": "^4.0.1",
     "dayjs": "^1.8.21",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
     "final-form": "^4.18.7",
     "prettier": "^1.19.1",
     "react": "^16.13.0",
@@ -50,6 +58,5 @@
     "react-final-form": "^6.3.5",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {}
+  }
 }
