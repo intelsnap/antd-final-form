@@ -3,16 +3,13 @@ import { Button } from 'antd';
 import { FormSpy } from 'react-final-form';
 import { ButtonProps } from 'antd/lib/button';
 
-const ResetButton = ({ children, onClick, ...restProps }: ButtonProps) => (
+const ResetButton = ({ children, ...restProps }: ButtonProps) => (
   <FormSpy>
     {(props) => (
       <Button
         type='primary'
         disabled={props.pristine}
-        onClick={(event) => {
-          onClick && onClick(event);
-          props.form.reset();
-        }}
+        onClick={() => props.form.reset()}
         {...restProps}
       >
         {children}

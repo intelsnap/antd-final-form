@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { FormSpy } from 'react-final-form';
 import { ButtonProps } from 'antd/lib/button';
 
-const SubmitButton = ({ children, onClick, ...restProps }: ButtonProps) => (
+const SubmitButton = ({ children, ...restProps }: ButtonProps) => (
   <FormSpy subscription={{ dirty: true, pristine: true, valid: true, submitting: true }}>
     {({ pristine, valid, submitting }) => (
       <Button

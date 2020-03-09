@@ -57,9 +57,10 @@ Add `import "antd/dist/antd.css"` to your `index.js` file.
 
 ## Core Components
 
-|                    | Name  | Props                                              |
-| ------------------ | ----- | -------------------------------------------------- |
-| :white_check_mark: | Input | [InputProps](https://ant.design/components/input/) |
+|                    | Name         | Props                                                |
+| ------------------ | ------------ | ---------------------------------------------------- |
+| :white_check_mark: | Input        | [InputProps](https://ant.design/components/input/)   |
+| :white_check_mark: | SubmitButton | [ButtonProps](https://ant.design/components/button/) |
 
 ## Contributors ✨
 
