@@ -59,6 +59,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-final-form": "^6.3.5",
+    "styled-components": "^5.0.1",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   }
