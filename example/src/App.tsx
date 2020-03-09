@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AntdInput, SubmitButton } from 'antd-final-form';
-import { Form, Field, FormSpy } from 'react-final-form';
+import { Form, Field } from 'react-final-form';
 import 'antd/dist/antd.css';
 
 export const required = (value: string | number) => (value ? undefined : '* Required');

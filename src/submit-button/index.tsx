@@ -6,9 +6,9 @@ import { ButtonProps } from 'antd/lib/button';
 const SubmitButton = () => (
   <FormSpy>
     {(props) => (
-      <button type='button' disabled={props.pristine} onClick={() => props.form.reset()}>
+      <Button type='primary' disabled={props.pristine} onClick={() => props.form.reset()}>
         Reset
-      </button>
+      </Button>
     )}
   </FormSpy>
 );

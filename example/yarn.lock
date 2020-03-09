@@ -1823,10 +1823,9 @@ ansi-styles@^4.1.0:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
 
-antd-final-form@^0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/antd-final-form/-/antd-final-form-0.1.16.tgz#4b02d3922a88600e4a85e80d43cd69d36b410145"
-  integrity sha512-6gDEN6H+NczA1vEwmhgirIlPXnMNXtm4vVE/bU3yEdLkEwfMEgmHg3kJxGaL4Aa6nA2LUXuJEteeR3GSQcSopw==
+"antd-final-form@link:..":
+  version "0.0.0"
+  uid ""
 
 antd@4.0.2:
   version "4.0.2"
@@ -8891,7 +8890,7 @@ react-dev-utils@^10.2.0:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.13.0:
+react-dom@16.13.0, react-dom@^16.13.0:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.0.tgz#cdde54b48eb9e8a0ca1b3dc9943d9bb409b81866"
   integrity sha512-y09d2c4cG220DzdlFkPTnVvGTszVvNpC73v+AaLGLHbkpy3SSgvYq8x0rNwPJ/Rk/CicTNgk0hbHNw1gMEZAXg==
@@ -8984,7 +8983,7 @@ react-scripts@^3.4.0:
   optionalDependencies:
     fsevents "2.1.2"
 
-react@^16.13.0:
+react@16.13.0, react@^16.13.0:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.0.tgz#d046eabcdf64e457bbeed1e792e235e1b9934cf7"
   integrity sha512-TSavZz2iSLkq5/oiE7gnFzmURKZMltmi193rm5HEoUDAXpzT9Kzw6oNZnGoai/4+fUnm7FqS5dwgUL34TujcWQ==
