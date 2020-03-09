@@ -19,5 +19,5 @@ const SubmitButton = ({ children, ...restProps }: ButtonProps) => (
   </FormSpy>
 );
 
-export { SubmitButton };
 export default SubmitButton;
+export { SubmitButton };

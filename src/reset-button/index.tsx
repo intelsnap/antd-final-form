@@ -18,5 +18,5 @@ const ResetButton = ({ children, ...restProps }: ButtonProps) => (
   </FormSpy>
 );
 
-export { ResetButton };
 export default ResetButton;
+export { ResetButton };

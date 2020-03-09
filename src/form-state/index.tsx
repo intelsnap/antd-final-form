@@ -4,7 +4,7 @@ import * as React from 'react';
 export const isDevelopmentMode = () =>
   !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
-export const FormState = (
+const FormState = (
   props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 ) =>
   isDevelopmentMode() ? (
@@ -19,3 +19,4 @@ export const FormState = (
   ) : null;
 
 export default FormState;
+export { FormState };
