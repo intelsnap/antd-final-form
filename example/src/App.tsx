@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AntdInput, SubmitButton } from 'antd-final-form';
+import { AntdInput, SubmitButton, ResetButton, FormState } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
 import 'antd/dist/antd.css';
 
@@ -10,7 +10,7 @@ export default function App() {
     <Form
       onSubmit={(values) => console.log(values)}
       initialValues={{ firstName: 'Larry', lastName: 'hello' }}
-      render={({ handleSubmit, form, submitting, pristine, values }) => (
+      render={({ handleSubmit, values }) => (
         <form onSubmit={handleSubmit}>
           <Field
             label='test'
@@ -20,8 +20,9 @@ export default function App() {
             placeholder='First Name'
           />
           <Field name='lastName' label='Last Name' component={AntdInput} />
-          <SubmitButton />
-          <pre>{JSON.stringify(values)}</pre>
+          <SubmitButton onClick={() => console.log(values)}>Submit</SubmitButton>
+          <ResetButton type='danger'>Reset</ResetButton>
+          <FormState />
         </form>
       )}
     />

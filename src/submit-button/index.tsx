@@ -1,13 +1,19 @@
 import * as React from 'react';
 import { Button } from 'antd';
-import { Field, FieldProps, FormSpy } from 'react-final-form';
+import { FormSpy } from 'react-final-form';
 import { ButtonProps } from 'antd/lib/button';
 
-const SubmitButton = () => (
-  <FormSpy>
-    {(props) => (
-      <Button type='primary' disabled={props.pristine} onClick={() => props.form.reset()}>
-        Reset
+const SubmitButton = ({ children, onClick, ...restProps }: ButtonProps) => (
+  <FormSpy subscription={{ dirty: true, pristine: true, valid: true, submitting: true }}>
+    {({ pristine, valid, submitting }) => (
+      <Button
+        loading={submitting}
+        type='primary'
+        htmlType='submit'
+        disabled={valid && pristine}
+        {...restProps}
+      >
+        {children}
       </Button>
     )}
   </FormSpy>
