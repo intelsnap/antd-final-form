@@ -11,7 +11,7 @@ const AntdInput: React.FC<Props> = ({ input, meta, ...rest }: Props) => {
   const isError = meta.error && meta.touched;
   return (
     <div>
-      <label>First Name</label>
+      <label>First Name helo</label>
       <Input {...input} {...rest} />
       {meta.error && meta.touched && <Text type='danger'>{meta.error}</Text>}
     </div>
