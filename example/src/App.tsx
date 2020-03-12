@@ -6,14 +6,17 @@ import {
   FormState,
   AntdCheckbox,
   AntdInputNumber,
-  AntdSelect
+  AntdSelect,
+  AntdRadio,
 } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
+import { FieldValidator } from 'final-form';
 import 'antd/dist/antd.css';
 
 const { Option } = AntdSelect;
 
-export const required = (value: string | number) => (value ? undefined : '* Required');
+export const required: FieldValidator<string | number> = (value: string | number) =>
+  value ? undefined : '* Required';
 
 interface Values {
   firstName?: string;
@@ -21,6 +24,7 @@ interface Values {
   employed?: boolean;
   salary?: number;
   stooge?: [string];
+  choice?: string;
 }
 
 const initialValues: Values = {
@@ -28,14 +32,15 @@ const initialValues: Values = {
   lastName: 'Bird',
   employed: true,
   salary: 120000,
-  stooge: [ 'larry' ]
+  choice: 'moe',
+  stooge: ['larry'],
 };
 
 const App: React.FC = () => (
   <Form
-    onSubmit={(values) => console.log(values)}
+    onSubmit={(values): void => console.log(values)}
     initialValues={initialValues}
-    render={({ handleSubmit, values }) => (
+    render={({ handleSubmit }): React.ReactNode => (
       <form onSubmit={handleSubmit}>
         <Field
           label='First Name'
@@ -48,7 +53,7 @@ const App: React.FC = () => (
         <Field name='employed' type='checkbox' label='Employed' component={AntdCheckbox} />
         <Field
           label='Salary'
-          formatter={(value: number) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          formatter={(value: number): string => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           name='salary'
           component={AntdInputNumber}
         />
@@ -57,6 +62,8 @@ const App: React.FC = () => (
           <Option value='moe'>Moe</Option>
           <Option value='curly'>Curly</Option>
         </Field>
+        <Field type='radio' value='moe' label='Choice 1' name='choice' component={AntdRadio} />
+        <Field type='radio' value='curley' label='Choice 2' name='choice' component={AntdRadio} />
         <SubmitButton>Submit</SubmitButton>
         <ResetButton type='danger'>Reset</ResetButton>
         <FormState />
