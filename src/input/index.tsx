@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Input, Typography } from 'antd';
-import { CloseCircleFilled } from '@ant-design/icons';
 import { FieldRenderProps } from 'react-final-form';
 
 const { Text } = Typography;
@@ -13,7 +12,7 @@ const AntdInput: React.FC<Props> = ({ input, meta, label, ...rest }: Props) => {
     <div>
       <label>{label}</label>
       <Input {...input} {...rest} />
-      {meta.error && meta.touched && <Text type='danger'>{meta.error}</Text>}
+      {isError && <Text type='danger'>{meta.error}</Text>}
     </div>
   );
 };
