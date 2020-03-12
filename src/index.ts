@@ -6,5 +6,6 @@ export * from './radio';
 export * from './rate';
 export * from './reset-button';
 export * from './select';
+export * from './slider';
 export * from './submit-button';
 export * from './switch';
