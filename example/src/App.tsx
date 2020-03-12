@@ -11,6 +11,7 @@ import {
   AntdRate,
   AntdSwitch,
   AntdSlider,
+  AntdTransfer,
 } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
 import { FieldValidator } from 'final-form';
@@ -31,6 +32,7 @@ interface Values {
   rating?: number;
   switch?: boolean;
   slider?: number;
+  transfer?: string[];
 }
 
 const initialValues: Values = {
@@ -43,7 +45,18 @@ const initialValues: Values = {
   rating: 4,
   switch: true,
   slider: 30,
+  transfer: ['1', '3'],
 };
+
+const mockData: object[] = [];
+
+for (let i = 0; i < 20; i++) {
+  mockData.push({
+    key: i.toString(),
+    title: `content${i + 1}`,
+    description: `description of content${i + 1}`,
+  });
+}
 
 const App: React.FC = () => (
   <Form
@@ -76,6 +89,13 @@ const App: React.FC = () => (
         <Field label='Rating' name='rating' component={AntdRate} />
         <Field type='checkbox' label='Switch' name='switch' component={AntdSwitch} />
         <Field label='Slider' name='slider' component={AntdSlider} />
+        <Field
+          label='Transfer'
+          name='transfer'
+          render={(item): string => item.title}
+          component={AntdTransfer}
+          dataSource={mockData}
+        />
         <SubmitButton>Submit</SubmitButton>
         <ResetButton type='danger'>Reset</ResetButton>
         <FormState />
