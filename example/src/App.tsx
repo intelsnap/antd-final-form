@@ -9,6 +9,7 @@ import {
   AntdSelect,
   AntdRadio,
   AntdRate,
+  AntdSwitch,
 } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
 import { FieldValidator } from 'final-form';
@@ -27,6 +28,7 @@ interface Values {
   stooge?: [string];
   choice?: string;
   rating?: number;
+  switch?: boolean;
 }
 
 const initialValues: Values = {
@@ -37,6 +39,7 @@ const initialValues: Values = {
   choice: 'choice1',
   stooge: ['larry'],
   rating: 4,
+  switch: true,
 };
 
 const App: React.FC = () => (
@@ -67,7 +70,8 @@ const App: React.FC = () => (
         </Field>
         <Field type='radio' value='choice1' label='Choice 1' name='choice' component={AntdRadio} />
         <Field type='radio' value='choice2' label='Choice 2' name='choice' component={AntdRadio} />
-        <Field value={3} label='Rating' name='rating' component={AntdRate} />
+        <Field label='Rating' name='rating' component={AntdRate} />
+        <Field type='checkbox' label='Switch' name='switch' component={AntdSwitch} />
         <SubmitButton>Submit</SubmitButton>
         <ResetButton type='danger'>Reset</ResetButton>
         <FormState />

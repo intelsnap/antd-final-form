@@ -7,3 +7,4 @@ export * from './rate';
 export * from './reset-button';
 export * from './select';
 export * from './submit-button';
+export * from './switch';
