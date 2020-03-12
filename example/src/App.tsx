@@ -12,6 +12,7 @@ import {
   AntdSwitch,
   AntdSlider,
   AntdTransfer,
+  AntdCascader,
 } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
 import { FieldValidator } from 'final-form';
@@ -33,6 +34,7 @@ interface Values {
   switch?: boolean;
   slider?: number;
   transfer?: string[];
+  cascader?: string[];
 }
 
 const initialValues: Values = {
@@ -46,7 +48,43 @@ const initialValues: Values = {
   switch: true,
   slider: 30,
   transfer: ['1', '3'],
+  cascader: ['path1', 'child1', 'child2'],
 };
+
+const cascaderOptions: object[] = [
+  {
+    value: 'path1',
+    label: 'Path 1',
+    children: [
+      {
+        value: 'child1',
+        label: 'Child 1',
+        children: [
+          {
+            value: 'child2',
+            label: 'Child 2',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'path2',
+    label: 'Path 2',
+    children: [
+      {
+        value: 'child1',
+        label: 'Child 1',
+        children: [
+          {
+            value: 'child2',
+            label: 'Child 2',
+          },
+        ],
+      },
+    ],
+  },
+];
 
 const mockData: object[] = [];
 
@@ -95,6 +133,12 @@ const App: React.FC = () => (
           render={(item): string => item.title}
           component={AntdTransfer}
           dataSource={mockData}
+        />
+        <Field
+          options={cascaderOptions}
+          label='Cascader'
+          name='cascader'
+          component={AntdCascader}
         />
         <SubmitButton>Submit</SubmitButton>
         <ResetButton type='danger'>Reset</ResetButton>

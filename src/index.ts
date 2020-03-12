@@ -1,3 +1,4 @@
+export * from './cascader';
 export * from './check-box';
 export * from './form-state';
 export * from './input';
