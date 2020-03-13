@@ -13,6 +13,7 @@ import {
   AntdSlider,
   AntdTransfer,
   AntdCascader,
+  AntdTable,
 } from 'antd-final-form';
 import { Form, Field } from 'react-final-form';
 import { FieldValidator } from 'final-form';
@@ -35,6 +36,7 @@ interface Values {
   slider?: number;
   transfer?: string[];
   cascader?: string[];
+  tableData?: object[];
 }
 
 const initialValues: Values = {
@@ -49,6 +51,18 @@ const initialValues: Values = {
   slider: 30,
   transfer: ['1', '3'],
   cascader: ['path1', 'child1', 'child2'],
+  tableData: [
+    {
+      id: '123',
+      name: 'item 1',
+      description: 'description 1',
+    },
+    {
+      id: '124',
+      name: 'item 2',
+      description: 'description 2',
+    },
+  ],
 };
 
 const cascaderOptions: object[] = [
@@ -139,6 +153,38 @@ const App: React.FC = () => (
           label='Cascader'
           name='cascader'
           component={AntdCascader}
+        />
+        <Field
+          columns={[
+            {
+              title: 'Name',
+              key: 'name',
+              render: (text: string, record: object, i: number): React.ReactNode => {
+                return <Field component={AntdInput} name={`tableData.${i}.name`} />;
+              },
+            },
+            {
+              title: 'Description',
+              key: 'description',
+              dataIndex: 'description',
+            },
+            {
+              key: 'actions',
+              title: 'Actions',
+              render: (text: string, record: object, i: number): JSX.Element => (
+                <Field
+                  component={AntdInput}
+                  style={{ border: 'none' }}
+                  name='tableData'
+                  index={i}
+                />
+              ),
+            },
+          ]}
+          pagination={false}
+          label='Table'
+          name='tableData'
+          component={AntdTable}
         />
         <SubmitButton>Submit</SubmitButton>
         <ResetButton type='danger'>Reset</ResetButton>

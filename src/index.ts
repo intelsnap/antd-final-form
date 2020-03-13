@@ -10,4 +10,5 @@ export * from './select';
 export * from './slider';
 export * from './submit-button';
 export * from './switch';
+export * from './table';
 export * from './transfer';
